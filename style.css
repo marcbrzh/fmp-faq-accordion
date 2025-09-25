@@ -1,0 +1,161 @@
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--purple-100);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--purple-950);
+}
+
+.accordion-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--purple-100);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--purple-950);
+  max-width: 230px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  flex-shrink: 0;
+}
+
+.toggle-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.accordion-content {
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--purple-600);
+  font-weight: 400;
+  max-width: 310px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Active states */
+.accordion-header:hover h2 {
+  color: var(--purple-600);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-size: 150% auto;
+  }
+
+  .faq-container {
+    max-width: 570px;
+  }
+
+  .faq-card {
+    border-radius: 1rem;
+    padding: 2.5rem 2rem 1rem 2.5rem;
+  }
+
+  .faq-header {
+    margin-bottom: 0;
+  }
+
+  .star-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    max-width: 500px;
+  }
+
+  .toggle-btn img {
+    width: 30px;
+    height: 30px;
+  }
+
+  p {
+    font-size: 15px;
+    max-width: 1000px;
+  }
+}
