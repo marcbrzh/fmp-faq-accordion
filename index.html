@@ -154,26 +154,5 @@
         </div>
       </div>
     </main>
-
-    <script>
-      document.querySelectorAll(".accordion-header").forEach((header) => {
-        header.addEventListener("click", () => {
-          const accordionItem = header.closest(".accordion-item");
-          const content = accordionItem.querySelector(".accordion-content");
-          const iconMinus = header.querySelector(".icon-minus");
-          const iconPlus = header.querySelector(".icon-plus");
-          const expanded = header.getAttribute("aria-expanded") === "true";
-          header.setAttribute("aria-expanded", !expanded);
-          content.classList.toggle("hidden");
-          iconMinus.classList.toggle("hidden");
-          iconPlus.classList.toggle("hidden");
-        });
-        header.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            header.click();
-          }
-        });
-      });
-    </script>
   </body>
 </html>
